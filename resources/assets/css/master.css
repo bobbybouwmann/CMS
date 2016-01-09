@@ -1,0 +1,14 @@
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    background-color: #2196F3 !important;
+}
+
+.navbar-btn > .btn-primary {
+    background-color: #1976D2;
+    color: white;
+}
+
+.navbar-btn > .btn-primary:hover,
+.navbar-btn > .btn-primary:active {
+    background-color: #1D6BB8;
+    color: white;
+}
