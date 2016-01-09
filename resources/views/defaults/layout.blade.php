@@ -6,7 +6,7 @@
         <title>@yield('title') | I9T</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
-        <link rel="stylesheet" href="./resources/assets/css/master.css">
+        <link rel="stylesheet" href="/i9t/resources/assets/css/master.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     </head>
     <body>

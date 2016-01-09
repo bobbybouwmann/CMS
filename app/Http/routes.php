@@ -71,4 +71,9 @@ Route::group(['middleware' => ['web']], function () {
         'uses'       => 'PostController@getAll',
         'middleware' => ['auth'],
     ]);
+
+    Route::get('/post/test', [
+        'as' => 'post.test',
+        'uses' => 'PostController@testCreate',
+    ]);
 });

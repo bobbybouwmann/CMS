@@ -13,7 +13,7 @@
         </div>
         <div class="col-xs-6 col-sm-6 col-md-4 text-center">
             <h3>View all posts.</h3>
-            <p>Need some insperation for a new post? Go ahead and <a href="#">read all posts</a> created to see what may spike your creativity.</p>
+            <p>Need some insperation for a new post? Go ahead and <a href="{{ route('post.all') }}">read all posts</a> created to see what may spike your creativity.</p>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-4 text-center">
             <h3>Manage your posts.</h3>

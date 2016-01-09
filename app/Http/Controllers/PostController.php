@@ -16,4 +16,17 @@ class PostController extends Controller
 
         return view('posts.community')->with('posts', $posts);
     }
+
+    public function testCreate()
+    {
+        Post::create([
+            'title' => 'Testsetset',
+            'slug'  => 'test-post-2',
+            'body'  => 'This is a test post',
+        ]);
+
+        notify()->flash('Completed.', 'success');
+
+        return redirect()->back();
+    }
 }

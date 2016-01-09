@@ -2,14 +2,12 @@
 
 namespace I9T\Models;
 
-use DB;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Post extends Model
 {
     use SoftDeletes;
-
 
     /**
      * The table associated with the model.
@@ -19,6 +17,18 @@ class Post extends Model
     protected $table = 'posts';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'user_id',
+        'title',
+        'slug',
+        'body',
+    ];
+
+    /**
      * The attributes that should be mutated to dates.
      *
      * @var array
@@ -26,12 +36,13 @@ class Post extends Model
     protected $dates = ['deleted_at'];
 
     /**
-     * Get the author of a specified post
+     * Gets the user that is directly related to the
+     * post.
      *
-     * @return mixed
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function getAuthor()
+    public function user()
     {
-        return DB::table('users')->where('id', $this->user_id);
+        return $this->belongsTo('I9T\Models\User', 'user_id');
     }
 }
