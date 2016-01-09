@@ -65,4 +65,10 @@ Route::group(['middleware' => ['web']], function () {
         'uses'       => 'HomeController@timeline',
         'middleware' => ['auth'],
     ]);
+
+    Route::get('/community/posts', [
+        'as'         => 'post.all',
+        'uses'       => 'PostController@getAll',
+        'middleware' => ['auth'],
+    ]);
 });
